@@ -3,7 +3,7 @@ int main()
 {
 char c;
 scanf("%c",&c);
-if(c == 'a' || c == 'u' || c == 'i' || c == 'o')
+if(c == 'a' || c == 'u' || c == 'i' || c == 'o' || c == 'e')
 {
     printf("Dzaynavor");
 }

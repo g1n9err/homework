@@ -5,19 +5,19 @@ int main()
 {
     int s;
     scanf("%d",&s);
-    if(s%3==0 && s%5==0)
+    if(s % 3 == 0 && s % 5 == 0)
     {
         printf("FizzBuzz");
     }
     else 
     {
-        if(s%3 == 0)
+        if(s % 3 == 0)
         {
             printf("Fizz");
         }
         else 
         {
-            if(s%5 == 0 )
+            if(s % 5 == 0 )
             {
                 printf("Buzz");
             }
