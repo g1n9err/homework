@@ -4,13 +4,15 @@ int main()
 {
     int base;
     int exponent;
-    int sum = 0;
+    int i = 0;
+    int sum = 1;
     scanf("%d %d", &base, &exponent);
     
-    while(sum <= exponent)
+    while(i < exponent)
     {
-        sum = base * exponent;
-        sum++;
+        // exp -> 4 
+        sum = sum * base;
+        i++;
     }
     printf("%d\n",sum);
     return 0;
