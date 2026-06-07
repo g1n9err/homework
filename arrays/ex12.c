@@ -8,5 +8,6 @@ int main()
         scanf("%d", &arr[i]);
     }
     
+    
     return 0;
 }
