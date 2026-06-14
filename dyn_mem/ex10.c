@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Function prototypes
+
 int* input_array(int n);
 int count_x(int *arr, int n, int x);
 int* filter_x(int *arr, int n, int x, int new_size);
@@ -37,7 +37,7 @@ int main() {
     return 0;
 }
 
-// Function implementations
+
 
 int* input_array(int n) {
     int *arr = (int*)malloc(n * sizeof(int));
