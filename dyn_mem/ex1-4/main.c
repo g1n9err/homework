@@ -4,9 +4,11 @@ int main() {
     int n;
     int *arr;
     
+    printf("Enter n: ");
     scanf("%d", &n);
     arr = (int*)malloc(n * sizeof(int));
     if(arr == NULL) {
+        printf("Memory allocation error\n");
         return 1;
     }
     arr_input(arr,n);
