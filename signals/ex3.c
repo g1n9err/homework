@@ -8,11 +8,18 @@ int main (){
     sigemptyset(&list);
     sigaddset(&list , SIGINT);
     
-    sigprocmask(SIG_BLOCK, &my_set, NULL);
+    sigprocmask(SIG_BLOCK, &list, NULL);
 
     for(int i = 0; i <= 10; ++i) {
-        printf("CHLP");
-        sleep(10);
+        printf("CHLP\n");
+        sleep(1);
     }
+    printf("\nDONE\n");
 
+    sigprocmask(SIG_UNBLOCK, &list , NULL);
+    
+    printf("\nStop process\n");
+
+    return 0;
 }
+

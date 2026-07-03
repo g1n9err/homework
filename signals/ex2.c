@@ -20,7 +20,7 @@ int main() {
     }
     
 
-    printf("Program stopped gracefully.\n");
+    printf("DONE\n");
     
     return 0;
 }
