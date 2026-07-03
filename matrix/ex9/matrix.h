@@ -1,10 +1,17 @@
+#ifndef MATRIX_H
+#define MATRIX_H
+
+
 #include <stdio.h>
 #include  <stdlib.h>
 #include <unistd.h>
+#include <dlfcn.h>
 
-int** matrix(int x, int y);
-void input_matrix(int **mat, int x, int y);
-void output_matrix(int **mat,int x, int y);
-long mull_matrix(int** mat, int x, int y);
-int sum_matrix(int **mat, int x, int y);
-void free_matrix(int **mat);
+int** matrix(int, int);
+void input_matrix(int **, int, int);
+void output_matrix(int **,int, int);
+long mull_matrix(int**, int, int);
+int sum_matrix(int **, int, int);
+void free_matrix(int **, int);
+
+#endif
