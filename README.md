@@ -1,53 +1,16 @@
 # C Homework
 
-A collection of C programming exercises, organized by topic.
+A collection of C programming exercises, organized by topic. More exercises and topics are added over time.
+
+The goal is hands-on practice with core C and systems programming. Each exercise is a standalone `.c` file (or a small folder for multi-file tasks).
 
 ## Structure
 
-| Folder       | Topic              |
-|--------------|--------------------|
-| `conditions` | if / else, switch  |
-| `loops`      | for, while, do/while |
-| `arrays`     | arrays and strings |
-| `dyn_mem`    | malloc, free, pointers |
-| `matrix`     | 2D arrays and matrix ops |
-| `signals`    | signal handlers (SIGINT, etc.) |
+Exercises are grouped in folders by topic. New folders appear as the collection grows.
 
-Each exercise is a standalone `.c` file (or a small folder for multi-file tasks).
+## Notes
 
-## Build & Run
-
-Most exercises compile with GCC:
-
-```bash
-gcc ex1.c -o ex1 && ./ex1
-```
-
-### Multi-file exercises
-
-**`dyn_mem/ex1-4/`**
-
-```bash
-cd dyn_mem/ex1-4
-gcc main.c implement.c -o ex && ./ex
-```
-
-**`dyn_mem/ex_9/`**
-
-```bash
-cd dyn_mem/ex_9
-gcc main.c stud_implement.c -o ex && ./ex
-```
-
-**`matrix/ex9/`** (shared library + `dlopen`)
-
-```bash
-cd matrix/ex9
-gcc -fPIC -shared matrix.c -o libmatrix.so
-gcc main.c -ldl -o ex && ./ex
-```
-
-## Requirements
-
-- GCC
-- Linux (for `signals/` and `matrix/ex9` dynamic loading)
+- This repo is a work in progress — new exercises may appear in any topic folder.
+- Most exercises are single files.
+- Some tasks span multiple files in a single folder.
+- Parts of the collection are Linux-specific.
