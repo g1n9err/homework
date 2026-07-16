@@ -6,7 +6,7 @@
 
 int main () {
 
-    pid_t pid = fork();
+    pid_t pid = fork(); 
     int status;
 
     if(pid < 0){
