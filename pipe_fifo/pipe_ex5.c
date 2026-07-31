@@ -4,7 +4,6 @@
 #include <sys/wait.h>
 #include <errno.h>
 
-#define SIZE 1024
 
 typedef struct 
 {
