@@ -28,10 +28,10 @@ class Document : public IPrintable, public ISavable, public ISerializable {
             content = c;
         }
         void print() override {
-            std::cout << "Printing document: " << title << " - " << content << std::endl;
+            std::cout << "printing document: " << title << " - " << content << std::endl;
         }
         void save() override {
-            std::cout << "Document saved: " << title << std::endl;
+            std::cout << "document saved: " << title << std::endl;
         }
         std::string serialize() override {
             return "title: " + title + ", content: " + content ;
@@ -45,30 +45,30 @@ class Image : public IPrintable, public ISavable, public ISerializable{
     public:
         Image(std::string f,std::string r):fileName(f),resolution(r) {}
         void print() override{
-            std::cout << "Printing image: " << fileName << " - " << resolution << std::endl;
+            std::cout << "printing image: " << fileName << " - " << resolution << std::endl;
         }
         void save() override {
-            std::cout << "Image saved: "  << fileName << std::endl;
+            std::cout << "image saved: "  << fileName << std::endl;
         }
         std::string serialize() override {
-            return "Name: " + fileName + ", resolutin: " + resolution; 
+            return "name: " + fileName + ", resolutin: " + resolution; 
         }
 };
 
-    int main() {
-        Document* doc = new Document("Report", "Important content here");
-        Image* img = new Image("photo.jpg", "1920x1080");
+int main() {
+    Document* doc = new Document("Report", "Important content here");
+    Image* img = new Image("photo.jpg", "1920x1080");
     
-        doc->print();
-        doc->save();
-        std::cout << doc->serialize() << std::endl;
+    doc->print();
+    doc->save();
+    std::cout << doc->serialize() << std::endl;
     
-        img->print();
-        img->save();
-        std::cout << img->serialize() << std::endl;
+    img->print();
+    img->save();
+    std::cout << img->serialize() << std::endl;
     
-        delete doc;
-        delete img;
+    delete doc;
+    delete img;
     
-        return 0;
-    }
+    return 0;
+}
