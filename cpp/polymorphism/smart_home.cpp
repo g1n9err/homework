@@ -46,5 +46,10 @@ int main() {
     for(int i = 0; i< sen.size(); ++i){
         std::cout<<"type: " << sen[i]->getType() << " data: " << sen[i]->readData()<<std::endl;
     }
+
+    for(int i = 0; i< sen.size(); ++i){
+        delete sen[i];
+    }
+
     return 0;
 }

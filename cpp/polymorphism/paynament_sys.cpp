@@ -6,6 +6,7 @@ class PaymentMethod{
         virtual void processPayment(double amount) {
             std::cout<<"Վճարումը մշակվում է:"<<std::endl;
         }
+        virtual ~PaymentMethod() = default;
 };
 
 class CreditCard:public PaymentMethod{
@@ -28,6 +29,10 @@ int main() {
     m.push_back(new PayPal);
     for(int i = 0; i < m.size(); ++i) {
         m[i]->processPayment(100.0);
+    }
+
+    for(int i = 0; i < m.size(); ++i) {
+        delete m[i];
     }
 
     return 0;

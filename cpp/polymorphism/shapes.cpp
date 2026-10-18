@@ -6,6 +6,7 @@ class Shape{
         virtual double area() {
             return 0.0;
         }
+        virtual ~Shape() = default;
 };
 
 class Rectangle:public Shape{
@@ -38,8 +39,12 @@ int main() {
     shapes.push_back(new Circle(3));
     shapes.push_back(new Rectangle(4,5));
 
-    for(int i = 0; i < shapes.size(); ++i){
+    for(int i{}; i < shapes.size(); ++i){
         std::cout << "Area: " << shapes[i]->area() << std::endl;
+    }
+
+    for(int i{}; i < shapes.size(); ++i){
+        delete shapes[i];
     }
 
     return 0;
